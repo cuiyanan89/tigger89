@@ -1,0 +1,24 @@
+<div class='module'>
+    <div class='module-header inner'>
+        <strong>节点</strong>
+    </div>
+    <div class="module-body" style="background-color:white;border-bottom-left-radius:0px;border-bottom-right-radius:0px;">
+    <div class='item-list'>
+        {%for node in nodes%}
+            <div class='item hentry'>
+                <h3 class="title"><a href="#" style="text-decoration:none;">{{node.nodename}}</a>
+                <a class="button button-rounded button-flat-action button-tiny" style="float:right;text-decoration:none;color:white;"href="#" id="{{node.id}}">添加新话题</a>
+                </h3>
+                <div class="meta">
+                    <a href="#" style="text-decoration:none;">讨论(5)</a>
+                    <span>·</span>
+                    <time datetime='2013-05-22T13:24:24Z' pubdate>四月前</time>
+                </div>
+            </div>
+        {%endfor%}
+    </div>
+    </div>
+    <div class='module-header inner'style="border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:3px;border-bottom-right-radius:3px;">
+        <strong></strong>
+    </div>
+</div>

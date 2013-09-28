@@ -1,0 +1,19 @@
+<div class='module'>
+    <div class='module-header inner'>
+        <strong>最近节点</strong>
+    </div>
+    <div class='module-body'>
+        <div class="item-list">
+            {%for node in nodes%}
+            <div class="item hentry">
+                <h3 class="title"><a href="/node/?id={{node.id}}">{{node.nodename}}</a></h3>
+                <div class="meta">
+                    <a href="">话题({{node.post_set.count}})</a>
+                    <span>@</span>
+                    <a href="">{{node.create_time}}</a>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class='module'>
+    <div class='module-header inner'>
+        <strong>{{post.title}}</strong>
+    </div>
+    <div class="inner" style="background-color:white;border-top-left-radius:0px;border-top-right-radius:0px;">
+    {%load markup%}
+    <p>{{post.content|markdown:'codehilite'}}</p>
+    </div>
+    <div class='module-header inner'style="border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:3px;border-bottom-right-radius:3px;">
+        <strong></strong>
+    </div>
+</div>
+<div class='module'>
+    <div class="inner" style="background-color:white;border-radius:3px;">
+    <div class="ds-thread" data-thread-key="{{post.id}}"data-title='{{post.title}}'></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"cuiyanan"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+    </div>
+</div>

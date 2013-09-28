@@ -1,0 +1,31 @@
+<div class='module'>
+    <div class='module-header inner'>
+        <strong>最近的帖子</strong>
+    </div>
+    <div class='module-body'>
+        <div class="item-list">
+            {%for post in posts%}
+            <div class="item hentry">
+                <h3 class="title"><a href="/post/?id={{post.id}}">{{post.title}}</a></h3>
+                <div class="meta">
+                    <span>{{post.node.nodename}}</span>
+                    <span>@</span>
+                    <span>{{post.create_time}}</span>
+                    <span>·</span>
+                    <span class="ds-thread-count" data-thread-key="{{post.id}}"></span>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"cuiyanan"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
