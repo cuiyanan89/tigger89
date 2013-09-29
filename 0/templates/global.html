@@ -4,8 +4,11 @@
     </div>
     <div class="inner" style="background-color:white;border-bottom-left-radius:3px;border-bottom-right-radius:3px;border-top-left-radius:0px;border-top-right-radius:0px;">
     <ul>
-    <li><a href="https://groups.google.com/forum/#!forum/python-cn">CPyUG邮件列表</a>
-    </li><li><a title="啄木鸟社区" href="http://wiki.woodpecker.org.cn">啄木鸟社区</a></li>
+<!--    <li><a href="https://groups.google.com/forum/#!forum/python-cn">CPyUG邮件列表</a>
+    </li><li><a title="啄木鸟社区" href="http://wiki.woodpecker.org.cn">啄木鸟社区</a></li>-->
+        {%for link in links%}
+            <li><a href="{{link.address}}">{{link.name}}</a></li>
+        {%endfor%}
     </ul>
     </div>
 </div>

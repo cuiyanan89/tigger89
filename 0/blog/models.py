@@ -4,6 +4,7 @@ from django.db import models
 # Create your models here.
 class Node(models.Model):
     nodename = models.CharField(max_length=30)
+    create_time = models.DateField(auto_now_add = True)
 
     def __unicode__(self):
         return self.nodename
@@ -17,7 +18,11 @@ class Post(models.Model):
 
     def __unicode__(self):
         return self.title
-
+class Link(models.Model):
+    name = models.CharField(max_length=30)
+    address = models.CharField(max_length=100)
+    def __unicode__(self):
+        return self.name
 #    def save(self):
 #        self.content_html = markdown(self.content,['codehilite'])
 #        super(Post,self).save()
